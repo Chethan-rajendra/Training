@@ -4,7 +4,7 @@ numbers = [1,2,3,4]
 
 puts numbers.first
 
-a = .5
+a = 0.5
 b = 1
 
 c = a + b

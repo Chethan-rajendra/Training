@@ -6,15 +6,24 @@
 class Mobiles
 
   def initialize(list)
+  @price=list
   end
 
-end
-
-@mobiles = {
-  :samsung: '10,000',
-  motorola: => '15,000',
-  "apple": '60,000'
+def mobile
+@mobiles={
+  "samsung" =>'10,000',
+  "motorola"=> '15,000',
+  "apple"=>'60,000',
+  "intex"=>"7000",
+  "Redme"=>"12000",
+  "micromax"=>"15000"
 }
-
-brand = 'Input From the user'
-rate = Mobile.new(brand)
+puts "The mobile price is:"
+puts "mobile price = #{@mobiles[@price]}"
+end
+end
+puts "Enter the mobile brand"
+brand=gets
+brand.delete!("\n")
+rate = Mobiles.new(brand)
+rate.mobile

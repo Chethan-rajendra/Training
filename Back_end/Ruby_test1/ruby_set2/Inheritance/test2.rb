@@ -32,70 +32,56 @@
 
 
 class Country
-
-	def initialize
+	
 		
-	 	@@countryCode="00"
-	 	puts "countryCode -> #{@@countryCode}"
-	end
+	
 
 	def countryCode 
-	 # the country code is 00
-	 @@countryCode
-
+		@countrycode="00"
+		puts "Country Code -> #{@countrycode}"
 	end
 end
 
 class City < Country
-	def initialize
-		@@cityCode = 212
-		puts "cityCode -> #{@@cityCode}"
+	
+			
+		# puts "This is the City code."
+	
 
-	end
-
-
-	def cityCode  
-	# --> city code is 212
-		@@cityCode
-	end
+		def citycode
+			@citycode=212
+			puts "cityCode -> #{@citycode}"
+			
+		end
+	# define cityCode  --> city code is 212
 end
 
-
-# class Number < Country
-# 	def initialize
-# 		puts "This is the landline number."
-# 	end
-
-# 	# define phoneNumber --> phone number is 2414211
-
-# end
 
 class Number < City
-	def initialize
-		
-		@@phoneNumber = 2414211
-		puts "phoneNumber -> #{@@phoneNumber}"
-	end
 
+	
+		# puts "This is the landline number."
+	
+	def phoneNumber
+			@phonenumber=2414211
+		puts "phoneNumber -> #{@phonenumber}"
+		
+	end
 	# define phoneNumber --> phone number is 2414211
 
-	def dialNumber
-		# puts @@countryCode
-		print "dialNumber -> "
-		print countryCode, cityCode, @@phoneNumber
-		puts ""
-		 
-	end
-end
 
+
+
+	def dialNumber
+		puts "dialNumber -> #{@countrycode} #{@citycode} #{@phonenumber}"
+	end
+
+end
 
 
 # instantiate a object and check for all code and final number
-obj1 = Country.new
-obj1.countryCode
-
-obj2 = City.new
-obj2.cityCode
-
-obj = Number.new
-obj.dialNumber
+number=Number.new
+number.countryCode
+number.citycode
+number.phoneNumber
+number.dialNumber

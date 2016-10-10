@@ -68,11 +68,6 @@ class User < Message
 	end
 
 
-	def sendPersonalMessage
-		personalChat("Hi, how are you?")
-	end
-
-
 end
 
 
@@ -82,4 +77,4 @@ client = User.new
 client.groupChat("Hi friends")
 client.sendPersonalMessage
 client.sendSecureMessage
-
+# client.sendPersonalMessage
