@@ -4,42 +4,40 @@
 
 class Person
 	def initialize(firstname ,lastname ,age ,city ,state)
-		puts "firstname: " + @firstname
-		puts "lastname: " + @lastname
-		puts "age: " + @age
-		puts "city: " + @city
-		puts "state: " + @state
-
-		@firstname, @lastname, @age, @city, @state = firstname, lastname, age, city ,state
+		 @firstname = firstname
+		 @lastname = lastname
+		 @age = age
+		 @city = city
+		 @state = state
 	end
 end
 
 class Student < Person
 	def introduction
-		
+		puts "firstname:- #{@firstname}", "Lastname:- #{@lastname}", "Age:- #{@age}", "City:- #{@city}", "State:- #{@state}" 
 		end
 end
 
 class Teacher < Person
 	def introduction
-		 @firstname, @lastname, @age, @city, @state = firstname, lastname, age, city ,state
+		 puts "firstname:- #{@firstname}", "Lastname:- #{@lastname}", "Age:- #{@age}", "City:- #{@city}", "State:- #{@state}"
 	end
 end 
 
 class Parent < Person
 	def introduction
-		 @firstname, @lastname, @age, @city, @state = firstname, lastname, age, city ,state
+		 puts "firstname:- #{@firstname}", "Lastname:- #{@lastname}", "Age:- #{@age}", "City:- #{@city}", "State:- #{@state}"
 	end
 end
 
 
 puts "************student*****************"
-student_obj = Student.new("RAM", "M", "22", "Mysore", "Karnataka")
+student_obj = Student.new("RAM", "M", "22", "Mysore", "Karnataka").introduction	
 
 
 puts "*************teacher*****************"
-teacher_obj = Teacher.new("Vinod", "K", "33", "Mysore", "Karnataka")
+teacher_obj = Teacher.new("Vinod", "K", "33", "Mysore", "Karnataka").introduction
 
 
 puts "*************parent*******************"
-parent_obj = Parent.new("Raghu", "Veer", "44", "Mysore", "Karnataka")
+parent_obj = Parent.new("Raghu", "Veer", "44", "Mysore", "Karnataka").introduction
