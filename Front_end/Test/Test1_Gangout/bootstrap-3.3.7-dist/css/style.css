@@ -1,0 +1,90 @@
+
+
+h1
+{
+  color: pink;
+}
+h1.head
+{
+	color:orange;
+}
+h2
+{
+  color: red;
+  align: center;
+}
+
+.right-section
+{
+  background-color: green;color:#fff;padding: 20px;
+}
+
+.center-section
+{
+  background-color: #7BB8A8;colo:#986956;padding:20px;font-size: 25px;
+}
+
+.left-section
+{
+  background-color: #39ADD1;color:#fff;padding: 20px;
+}
+
+ /*Form*/
+ .myform
+ {
+  background-color: #9CC0D0;
+  padding: 30px;
+ }
+
+ .form-group1
+ {
+  color:red;
+ }
+
+ /*Mobile portrait*/
+ @media (max-width: 480px) {
+  h1{
+
+     font-size: 12px;
+  	}
+   }
+
+  
+/*mobile landscape*/
+@media (min-width: 481px) and (max-width: 599px) { 
+ h1{
+ 	background-color: #39ADD1;color:#fff;padding: 20px;
+    font-size:24px;
+ 	}
+   }
+
+ 
+/ * small tablet portrait*/
+@media (min-width: 600px) and (max-width: 767px) {
+  h1{
+  	font-size: 36px;
+  }
+
+}
+
+  
+/*small tablet landscape*/
+@media (min-width: 768px) and (max-width: 959px) { 
+  h1{
+  	font-size: 48px;
+  }
+}
+
+  
+/*Tablet landscape (1024x768)*/
+
+@media (min-width: 960px) and (max-width: 1199px) { 
+  h1{
+  	font-size: 52px;
+  }
+  h2{
+  	font-size: 43px;
+  	background-color: #5C5463;
+
+  }
+ }
