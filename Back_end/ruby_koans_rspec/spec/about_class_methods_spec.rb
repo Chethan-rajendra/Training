@@ -7,15 +7,15 @@ describe "Class Methods" do
 
   it "should demonstrate objects_are_objects" do
     fido = Dog.new
-    fido.is_a?(Object).should eql __
+    fido.is_a?(Object).should eql true
   end
 
   it "should demonstrate classes_are_classes" do
-    Dog.is_a?(Class).should eql __
+    Dog.is_a?(Class).should eql true
   end
 
   it "should demonstrate classes_are_objects_too" do
-    Dog.is_a?(Object).should eql __
+    Dog.is_a?(Object).should eql true
   end
 
   it "should demonstrate objects_have_methods" do

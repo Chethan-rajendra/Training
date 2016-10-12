@@ -7,7 +7,7 @@ describe "Classes" do
 
   it "should demonstrate instances_of_classes_can_be_created_with_new" do
     fido = Dog.new
-    fido.class.should eql __
+    fido.class.should eql Dog
   end
 
   # ------------------------------------------------------------------
@@ -20,10 +20,10 @@ describe "Classes" do
 
   it "should demonstrate instance_variables_can_be_set_by_assigning_to_them" do
     fido = Dog2.new
-    fido.instance_variables.should eql __
+    fido.instance_variables.should eql []
 
     fido.set_name("Fido")
-    fido.instance_variables.should eql __
+    fido.instance_variables.should eql [:@name]
   end
 
   it "should demonstrate instance_variables_cannot_be_accessed_outside_the_class" do

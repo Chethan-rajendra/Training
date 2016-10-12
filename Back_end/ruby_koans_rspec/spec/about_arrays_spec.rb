@@ -57,30 +57,30 @@ describe "Arrays" do
   it "should demonstrate slicing with ranges" do
     array = [:peanut, :butter, :and, :jelly]
 
-    array[0..2].should eql __
-    array[0...2].should eql __
-    array[2..-1].should eql __
+    array[0..2].should eql [:peanut, :butter, :and]
+    array[0...2].should eql [:peanut, :butter]
+    array[2..-1].should eql [:and, :jelly]
   end
 
   it "should demonstrate pushing and popping arrays" do
     array = [1,2]
     array.push(:last)
 
-    array.should eql __
+    array.should eql [1, 2, :last]
 
     popped_value = array.pop
-    popped_value.should eql __
-    array.should eql __
+    popped_value.should eql :last
+    array.should eql [1, 2]
   end
 
   it "should demonstrate shifting arrays" do
     array = [1,2]
     array.unshift(:first)
 
-    array.should eql __
+    array.should eql [:first, 1, 2]
 
     shifted_value = array.shift
-    shifted_value.should eql __
-    array.should eql __
+    shifted_value.should eql :first
+    array.should eql [1,2]
   end
 end

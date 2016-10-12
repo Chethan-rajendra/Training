@@ -1,15 +1,15 @@
-require 'spec_helper'
+require File.expand_path(File.dirname(__FILE__) + '/neo')
 
-describe "Open Classes" do
+class AboutOpenClasses < Neo::Koan
   class Dog
     def bark
       "WOOF"
     end
   end
 
-  it "should demonstrate as_defined_dogs_do_bark" do
+  def test_as_defined_dogs_do_bark
     fido = Dog.new
-    fido.bark.should eql "WOOF"
+    assert_equal __, fido.bark
   end
 
   # ------------------------------------------------------------------
@@ -21,10 +21,10 @@ describe "Open Classes" do
     end
   end
 
-  it "should demonstrate after_reopening_dogs_can_both_wag_and_bark" do
+  def test_after_reopening_dogs_can_both_wag_and_bark
     fido = Dog.new
-    fido.wag.should eql "HAPPY"
-    fido.bark.should eql "WOOF"
+    assert_equal __, fido.wag
+    assert_equal __, fido.bark
   end
 
   # ------------------------------------------------------------------
@@ -35,11 +35,11 @@ describe "Open Classes" do
     end
   end
 
-  it "should demonstrate even_existing_built_in_classes_can_be_reopened" do
-    1.even?.should eql false
-    2.even?.should eql true
+  def test_even_existing_built_in_classes_can_be_reopened
+    assert_equal __, 1.even?
+    assert_equal __, 2.even?
   end
 
   # NOTE: To understand why we need the :: before Integer, you need to
-  # become enlightened about scope.  
+  # become enlightened about scope.
 end
