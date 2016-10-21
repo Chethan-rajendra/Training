@@ -1,0 +1,7 @@
+development:
+  database: pro1_app
+  username: postgres
+  password: password
+  host: localhost
+  port: 5432 
+  adapter: postgresql

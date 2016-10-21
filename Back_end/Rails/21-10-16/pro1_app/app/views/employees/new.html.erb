@@ -1,0 +1,17 @@
+<h3> Enter the employee details</h3>
+<%=form_for(@employee, url: empl_path) do |f|%>
+	
+	<p>
+	<%= f.label :firstname %><br>
+    <%= f.text_field :First_name %><br>
+    </p>
+    <p>
+    <%= f.label :lastname %><br>
+    <%= f.text_field :Last_name %><br>
+    </p>
+    <p>
+    <%= f.label :employee_code %><br>
+    <%= f.text_field :Employee_code %><br>
+    </p>
+    <%= f.submit :submit %>
+<%end%>
